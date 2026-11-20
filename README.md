@@ -18,7 +18,7 @@ Live preview: https://marshallsfolly.github.io/ctr-group-refresh/ (marked `noind
 
 Swiss mono with a nod to [Brass Hands](https://brasshands.com), taken from the shipyard rather than copied:
 - **Color:** haze gray background (Navy ship paint), charcoal ink, safety orange as the only accent. Orange never carries small text on gray.
-- **Type:** Inter Tight for headlines, Martian Mono for labels and readouts, Big Shoulders Stencil for numbers and the wordmark. All are SIL OFL, self-hosted in `src/assets/fonts/` with their licenses.
+- **Type:** Inter Tight for headlines, Martian Mono for labels and readouts, Big Shoulders (solid, not the stencil cut, for legibility on phones) for numbers and the wordmark. All are SIL OFL, self-hosted in `src/assets/fonts/` with their licenses.
 - **Visual devices:** blueprint welding symbols as trade glyphs, job cards styled as riveted data plates, a Plimsoll load-line mark for the logo, hazard-tape bands, and a hull draft-mark scroll ruler on wide screens.
 
 ## Build

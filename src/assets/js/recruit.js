@@ -186,7 +186,7 @@ const VIEWS = {
     const rows = host.querySelector("[data-rows]");
     wireFilter((r) => {
       const list = filter(people, r).sort((a, b) => b.match - a.match);
-      rows.innerHTML = list.slice(0, 150).map((c) => `<tr data-id="${c.id}" style="cursor:pointer"><td><strong>${esc(c.first)} ${esc(c.last)}</strong><br><span class="fine">${c.id}</span></td><td>${esc(TRADE[c.trade].name)}<br><span class="fine">${esc(LEVEL[c.level].name)} · ${c.years} yrs</span></td><td>${esc(placeName(PLACE[c.home]))}</td><td>${esc(stageName(stageOf(c)))}</td><td><b class="stencil" style="font-size:22px">${c.match}</b></td><td>${esc(sourceName(c.source))}</td><td>${c.active}</td></tr>`).join("") + (list.length > 150 ? `<tr><td colspan="7" class="fine">Showing 150 of ${list.length}. Narrow the search.</td></tr>` : "");
+      rows.innerHTML = list.slice(0, 150).map((c) => `<tr data-id="${c.id}" style="cursor:pointer"><td><strong>${esc(c.first)} ${esc(c.last)}</strong><br><span class="fine">${c.id}</span></td><td>${esc(TRADE[c.trade].name)}<br><span class="fine">${esc(LEVEL[c.level].name)} · ${c.years} yrs</span></td><td>${esc(placeName(PLACE[c.home]))}</td><td>${esc(stageName(stageOf(c)))}</td><td><b class="signage" style="font-size:22px">${c.match}</b></td><td>${esc(sourceName(c.source))}</td><td>${c.active}</td></tr>`).join("") + (list.length > 150 ? `<tr><td colspan="7" class="fine">Showing 150 of ${list.length}. Narrow the search.</td></tr>` : "");
     });
     rows.addEventListener("click", (e) => {
       const tr = e.target.closest("tr[data-id]");
@@ -279,7 +279,7 @@ function openSheet(id) {
   sheet.innerHTML = `<div class="sheet__body" role="dialog" aria-modal="true" aria-label="${esc(c.first)} ${esc(c.last)}">
     <div class="sheet__head"><span>Candidate ${c.id} · ${esc(sourceName(c.source))}</span><button type="button" data-close aria-label="Close">×</button></div>
     <div class="sheet__inner">
-      <div style="display:flex;gap:14px;align-items:center"><span class="avatar avatar--lg">${initials(c.first, c.last)}</span><div style="flex:1"><p class="h3" style="margin:0">${esc(c.first)} ${esc(c.last)}</p><p class="small" style="margin:4px 0 0">${esc(t.flat ? t.name : `${LEVEL[c.level].name} ${t.name}`)} · ${c.years} yrs · ${esc(placeName(PLACE[c.home]))}</p></div><div style="text-align:right"><b class="stencil" style="font-size:48px">${c.match}</b><br><span class="fine">Match</span></div></div>
+      <div style="display:flex;gap:14px;align-items:center"><span class="avatar avatar--lg">${initials(c.first, c.last)}</span><div style="flex:1"><p class="h3" style="margin:0">${esc(c.first)} ${esc(c.last)}</p><p class="small" style="margin:4px 0 0">${esc(t.flat ? t.name : `${LEVEL[c.level].name} ${t.name}`)} · ${c.years} yrs · ${esc(placeName(PLACE[c.home]))}</p></div><div style="text-align:right"><b class="signage" style="font-size:48px">${c.match}</b><br><span class="fine">Match</span></div></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
         <button class="btn btn--hazard" type="button" data-schedule>Schedule interview</button>
         <a class="btn" href="${root}recruit/room/?c=${c.id}">Start video call</a>

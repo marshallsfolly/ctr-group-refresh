@@ -159,7 +159,7 @@ ${head.includes('name="robots"') ? "" : `<meta name="robots" content="${robots}"
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="${root}assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${root}assets/fonts/martian-mono.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="${root}assets/fonts/big-shoulders-stencil.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${root}assets/fonts/big-shoulders.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${root}assets/css/site.css?v=${SITE.version}">
 ${head}
 ${jsonld.map(ld).join("\n")}

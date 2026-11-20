@@ -2,7 +2,7 @@
 // Shell and search data are cached up front so search works with no signal; pages are
 // network-first with a cached copy behind them; saved jobs are cached on request.
 
-const VERSION = "bd802ac8fa";
+const VERSION = "71daa020af";
 const SHELL = `ctr-shell-${VERSION}`;
 const PAGES = "ctr-pages";
 const PRECACHE = [
@@ -14,14 +14,14 @@ const PRECACHE = [
   "offline/",
   "manifest.webmanifest",
   "data/jobs.json",
-  "assets/css/site.css?v=bd802ac8fa",
-  "assets/js/app.js?v=bd802ac8fa",
-  "assets/js/search.js?v=bd802ac8fa",
-  "assets/js/saved.js?v=bd802ac8fa",
-  "assets/js/account.js?v=bd802ac8fa",
-  "assets/js/auth.js?v=bd802ac8fa",
+  "assets/css/site.css?v=71daa020af",
+  "assets/js/app.js?v=71daa020af",
+  "assets/js/search.js?v=71daa020af",
+  "assets/js/saved.js?v=71daa020af",
+  "assets/js/account.js?v=71daa020af",
+  "assets/js/auth.js?v=71daa020af",
   "assets/css/site.css",
-  "assets/fonts/big-shoulders-stencil.woff2",
+  "assets/fonts/big-shoulders.woff2",
   "assets/fonts/inter-tight.woff2",
   "assets/fonts/martian-mono.woff2",
   "assets/icons/icon-192.png",
